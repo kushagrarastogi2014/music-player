@@ -1,0 +1,27 @@
+nav {
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  div {
+    display: flex;
+  }
+
+  button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 1rem;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    button {
+      z-index: 100;
+    }
+  }
+}

@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+h3,
+h4 {
+  font-weight: 400;
+  color: rgb(100, 100, 100);
+}
+
+.App {
+  min-height: 100vh;
+  transition: all 0.5s ease;
+}
+
+.library-active {
+  margin-left: 30%;
+}
+
+.App.light {
+  background-color: white;
+  h1,
+  h2,
+  p {
+    color: rgb(54, 54, 54);
+  }
+  h3,
+  h4 {
+    color: rgb(100, 100, 100);
+  }
+
+  nav {
+    button {
+      border: 2px solid rgb(65, 65, 65);
+
+      &:hover {
+        background: rgb(65, 65, 65);
+        color: white;
+      }
+    }
+  }
+
+  .library {
+    background-color: white;
+    box-shadow: 2px 2px 50px rgb(204, 204, 204);
+  }
+
+  .library-song {
+    &:hover {
+      background: rgb(222, 222, 255);
+    }
+  }
+
+  .selected {
+    background: rgb(165, 178, 221);
+  }
+}
+
+.App.dark {
+  background-color: black;
+
+  nav {
+    svg {
+      color: white;
+    }
+  }
+  .player-control {
+    svg {
+      color: white;
+    }
+  }
+
+  h1,
+  h2,
+  p {
+    color: white;
+  }
+  h3,
+  h4 {
+    color: #ccd;
+  }
+
+  nav {
+    button {
+      color: white;
+      border: 2px solid white;
+
+      &:hover {
+        background: white;
+        color: black;
+
+        svg {
+          color: black;
+        }
+      }
+    }
+  }
+
+  .library {
+    background-color: black;
+    box-shadow: 2px 2px 20px rgb(34, 34, 34);
+  }
+
+  .library-song {
+    &:hover:not(.selected) {
+      background: rgb(120, 86, 155);
+    }
+  }
+
+  .selected {
+    background: rebeccapurple;
+  }
+}
+
+@import "./song";
+@import "./player";
+@import "./library";
+@import "./nav";
